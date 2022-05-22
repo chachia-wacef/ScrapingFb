@@ -9,3 +9,6 @@ Then, you can consult the "localhost/fbscrap/" url or you can execute the "Post"
 *pagrurl : presents the link of the publications of the chosen facebook page. it is of the form https://www.facebook.com/pg/<url_page_name>/posts/" with <url_page_name> can be obtained by deleting the "https://www.facebook.com/" part of the link of the page.
 
 *scrollnbr : This is the number of times we will scroll down the facebook page to see more posts.
+
++Exemple of Json object for test : 
+{"pagename":"Meta AI", "pagrurl":"https://www.facebook.com/pg/MetaAI/posts/", "scrollnbr":4}
