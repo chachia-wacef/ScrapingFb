@@ -1,0 +1,16 @@
+fastapi == 0.70.0
+fastapi_sqlalchemy == 0.2.1
+pydantic
+alembic 
+psycopg2
+python-dotenv
+uvicorn == 0.15.0
+selenium == 3.141.0
+sqlalchemy == 1.4.35
+httptools
+starlette
+typing
+uvloop
+websockets
+h11
+logging
