@@ -23,8 +23,8 @@ async def root():
 async def fbscrap(scrap_info): #contient : pagename, pageurl, scrollnbr
     dates,posts_texts,reactions_nbr,shares_nbr,comments_nbr,comments,post_images,post_videos = scrap_fb(scrap_info.pagrurl,scrap_info.scrollnbr)
     for k in range(len(dates)):
-        db_fb = Fbdata(page_name=scrap_info.pagename, date=dates[k], text = posts_texts[k],reactions_nbr=reactions_nbr[k],
-                       shares_nbr=shares_nbr[k],comments_nbr=comments_nbr[k],comments=comments[k],images_url=post_images[k],videos_url=post_videos[k])
+        db_fb = Fbdata(page_name=scrap_info.pagename, date=dates[k], text = posts_texts[k],reactions_nbr=int(reactions_nbr[k]),
+                       shares_nbr=int(shares_nbr[k]),comments_nbr=int(comments_nbr[k]),comments=comments[k],images_url=post_images[k],videos_url=post_videos[k])
         db.session.add(db_fb)
         db.session.commit()
     return 1
